@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: li_jenna_coding_assignment11
+    ports:
+      - '7775:7775'
+    environment:
+      - PORT=7775
+    volumes:
+      - .:/li_jenna_site
+      - /li_jenna_site/node_modules
+      
